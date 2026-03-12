@@ -6,12 +6,12 @@
     <title>打工人精神狀態 | 首頁</title>
     <meta
       name="description"
-      content="打工人精神狀態是以布偶貓角色為核心的 IP 品牌，多頁式作品集網站首頁。"
+      content="打工人精神狀態首頁，以圓潤可愛風格呈現圖文創作者與品牌 IP 的核心介紹。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Noto+Serif+TC:wght@700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,16 +21,16 @@
           extend: {
             fontFamily: {
               sans: ["Noto Sans TC", "sans-serif"],
-              serif: ["Noto Serif TC", "serif"],
             },
             colors: {
-              ink: "#111111",
-              mist: "#f1f1ed",
-              stone: "#d5d5ce",
-              smoke: "#6f6f67",
+              night: "#270722",
+              butter: "#ECCE8E",
+              moss: "#928B67",
+              cream: "#fff9ec",
+              haze: "#f5ecd1",
             },
             boxShadow: {
-              soft: "0 30px 80px rgba(17, 17, 17, 0.06)",
+              cloud: "0 28px 70px rgba(39, 7, 34, 0.14)",
             },
           },
         },
@@ -39,66 +39,71 @@
     <style>
       body {
         background:
-          radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 24%),
-          linear-gradient(180deg, #fbfbf8 0%, #f4f4ef 100%);
+          radial-gradient(circle at top left, rgba(236, 206, 142, 0.55), transparent 24%),
+          radial-gradient(circle at 85% 18%, rgba(146, 139, 103, 0.24), transparent 20%),
+          linear-gradient(180deg, #fffdf8 0%, #fff6dd 100%);
       }
     </style>
   </head>
-  <body class="font-sans text-ink antialiased">
+  <body class="font-sans text-night antialiased">
     <header class="fixed inset-x-0 top-0 z-50">
-      <div class="mx-auto max-w-7xl px-6 pt-4 lg:px-10">
-        <div class="flex items-center justify-between rounded-full border border-black/8 bg-white/85 px-5 py-4 shadow-soft backdrop-blur md:px-7">
-          <a href="index.html" class="text-sm font-bold tracking-[0.24em] text-ink uppercase">
-            打工人精神狀態
-          </a>
+      <div class="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-10">
+        <div class="rounded-[2rem] border border-night/10 bg-cream/92 px-5 py-4 shadow-cloud backdrop-blur">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <a href="index.html" class="text-sm font-black tracking-[0.2em] text-night">
+              打工人精神狀態
+            </a>
 
-          <nav class="hidden items-center gap-7 text-sm text-ink/62 md:flex">
-            <a href="index.html" class="font-medium text-ink">首頁</a>
-            <a href="services.html" class="font-medium transition hover:text-ink">服務項目</a>
-            <a href="works.html" class="font-medium transition hover:text-ink">作品集展示</a>
-            <a href="contact.html" class="font-medium transition hover:text-ink">聯絡我</a>
-          </nav>
+            <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-night/68">
+              <a href="index.html" class="text-night">首頁</a>
+              <a href="services.html" class="transition hover:text-night">服務項目</a>
+              <a href="works.html" class="transition hover:text-night">作品集展示</a>
+              <a href="contact.html" class="transition hover:text-night">聯絡我</a>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
 
-    <main class="px-6 pb-16 pt-32 lg:px-10">
-      <section class="mx-auto grid min-h-[82vh] max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+    <main class="px-4 pb-16 pt-36 sm:px-6 lg:px-10">
+      <section class="mx-auto grid min-h-[80vh] max-w-7xl gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
         <div class="max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-[0.36em] text-ink/42">Home / IP Brand</p>
-          <h1 class="mt-7 font-serif text-5xl font-black leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-[5.5rem]">
-            以布偶貓角色，
-            <br />
-            建立打工人的情緒宇宙。
+          <span class="inline-flex rounded-full bg-butter px-4 py-2 text-xs font-bold tracking-[0.24em] text-night">
+            IP CREATOR
+          </span>
+          <h1 class="mt-7 text-5xl font-black leading-[1.02] tracking-[-0.05em] text-night sm:text-6xl lg:text-[5.8rem]">
+            打工人精神狀態
           </h1>
-          <p class="mt-8 max-w-2xl text-base leading-8 text-ink/66 sm:text-lg">
-            「打工人精神狀態」是一個以布偶貓角色為核心的 IP 品牌，
-            將職場疲憊、幽默自嘲與日常共鳴轉化為可延伸的角色設計、視覺語言與內容企劃。
-            這裡是品牌首頁，用來快速導覽服務、作品與聯絡資訊。
+          <h2 class="mt-6 text-2xl font-bold leading-relaxed text-moss sm:text-3xl">
+            嗨，我是打工人，一名從厭世上班族引退的圖文創作者。
+          </h2>
+          <p class="mt-7 max-w-2xl text-base leading-8 text-night/72 sm:text-lg">
+            將職場與生活日常轉化為引發大眾共鳴的 IP 角色。從 LINE/GIPHY
+            貼圖設計、品牌社群內容規劃，到跨界商業聯名，我擅長用輕鬆詼諧的視覺語彙，為品牌注入獨特的生命力與社群話題性。
           </p>
 
           <div class="mt-10 flex flex-wrap gap-4">
             <a
               href="services.html"
-              class="rounded-full bg-ink px-7 py-3 text-sm font-bold tracking-[0.18em] text-white uppercase transition hover:bg-black/85"
+              class="rounded-full bg-night px-7 py-3 text-sm font-bold tracking-[0.18em] text-butter transition hover:bg-moss hover:text-white"
             >
               查看服務項目
             </a>
             <a
               href="works.html"
-              class="rounded-full border border-black/12 bg-white px-7 py-3 text-sm font-bold tracking-[0.18em] text-ink uppercase transition hover:border-black/30"
+              class="rounded-full border border-moss/30 bg-white/80 px-7 py-3 text-sm font-bold tracking-[0.18em] text-night transition hover:border-night/35 hover:bg-butter/35"
             >
               瀏覽作品集
             </a>
           </div>
         </div>
 
-        <div class="rounded-[2rem] border border-black/8 bg-white/78 p-6 shadow-soft backdrop-blur sm:p-8">
+        <div class="rounded-[2.4rem] border border-night/8 bg-white/72 p-5 shadow-cloud backdrop-blur sm:p-7">
           <div
-            class="flex aspect-[4/5] items-center justify-center rounded-[1.6rem] border border-dashed border-stone bg-mist"
+            class="flex aspect-[4/5] items-center justify-center rounded-[2rem] border-2 border-dashed border-moss/40 bg-haze"
           >
-            <span class="text-sm font-medium uppercase tracking-[0.28em] text-smoke">
-              Visual Placeholder
+            <span class="rounded-full bg-white/70 px-4 py-2 text-sm font-bold tracking-[0.22em] text-moss">
+              VISUAL PLACEHOLDER
             </span>
           </div>
         </div>

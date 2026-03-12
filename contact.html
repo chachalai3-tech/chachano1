@@ -6,12 +6,12 @@
     <title>打工人精神狀態 | 聯絡我</title>
     <meta
       name="description"
-      content="打工人精神狀態聯絡頁，提供品牌合作、角色企劃與商業聯名的聯絡入口。"
+      content="打工人精神狀態聯絡頁，提供品牌合作、角色授權與商業聯名的聯絡入口。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Noto+Serif+TC:wght@700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,16 +21,16 @@
           extend: {
             fontFamily: {
               sans: ["Noto Sans TC", "sans-serif"],
-              serif: ["Noto Serif TC", "serif"],
             },
             colors: {
-              ink: "#111111",
-              mist: "#f1f1ed",
-              stone: "#d5d5ce",
-              smoke: "#6f6f67",
+              night: "#270722",
+              butter: "#ECCE8E",
+              moss: "#928B67",
+              cream: "#fff9ec",
+              haze: "#f5ecd1",
             },
             boxShadow: {
-              soft: "0 30px 80px rgba(17, 17, 17, 0.06)",
+              cloud: "0 28px 70px rgba(39, 7, 34, 0.14)",
             },
           },
         },
@@ -39,55 +39,60 @@
     <style>
       body {
         background:
-          radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 24%),
-          linear-gradient(180deg, #fbfbf8 0%, #f4f4ef 100%);
+          radial-gradient(circle at top left, rgba(236, 206, 142, 0.55), transparent 24%),
+          radial-gradient(circle at 85% 18%, rgba(146, 139, 103, 0.24), transparent 20%),
+          linear-gradient(180deg, #fffdf8 0%, #fff6dd 100%);
       }
     </style>
   </head>
-  <body class="font-sans text-ink antialiased">
+  <body class="font-sans text-night antialiased">
     <header class="fixed inset-x-0 top-0 z-50">
-      <div class="mx-auto max-w-7xl px-6 pt-4 lg:px-10">
-        <div class="flex items-center justify-between rounded-full border border-black/8 bg-white/85 px-5 py-4 shadow-soft backdrop-blur md:px-7">
-          <a href="index.html" class="text-sm font-bold tracking-[0.24em] text-ink uppercase">
-            打工人精神狀態
-          </a>
+      <div class="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-10">
+        <div class="rounded-[2rem] border border-night/10 bg-cream/92 px-5 py-4 shadow-cloud backdrop-blur">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <a href="index.html" class="text-sm font-black tracking-[0.2em] text-night">
+              打工人精神狀態
+            </a>
 
-          <nav class="hidden items-center gap-7 text-sm text-ink/62 md:flex">
-            <a href="index.html" class="font-medium transition hover:text-ink">首頁</a>
-            <a href="services.html" class="font-medium transition hover:text-ink">服務項目</a>
-            <a href="works.html" class="font-medium transition hover:text-ink">作品集展示</a>
-            <a href="contact.html" class="font-medium text-ink">聯絡我</a>
-          </nav>
+            <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-night/68">
+              <a href="index.html" class="transition hover:text-night">首頁</a>
+              <a href="services.html" class="transition hover:text-night">服務項目</a>
+              <a href="works.html" class="transition hover:text-night">作品集展示</a>
+              <a href="contact.html" class="text-night">聯絡我</a>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
 
-    <main class="px-6 pb-20 pt-32 lg:px-10">
-      <section class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+    <main class="px-4 pb-20 pt-36 sm:px-6 lg:px-10">
+      <section class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
         <div class="max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-[0.36em] text-ink/42">Contact</p>
-          <h1 class="mt-7 font-serif text-5xl font-black leading-[1.04] tracking-[-0.04em] sm:text-6xl lg:text-[5rem]">
-            如果想讓角色
+          <span class="inline-flex rounded-full bg-butter px-4 py-2 text-xs font-bold tracking-[0.24em] text-night">
+            CONTACT
+          </span>
+          <h1 class="mt-7 text-4xl font-black leading-tight tracking-[-0.04em] text-night sm:text-6xl">
+            如果想一起做出
             <br />
-            走進品牌合作，
+            可愛又有梗的品牌內容，
             <br />
             可以從這裡開始。
           </h1>
-          <p class="mt-8 max-w-2xl text-base leading-8 text-ink/66 sm:text-lg">
+          <p class="mt-7 max-w-2xl text-base leading-8 text-night/72 sm:text-lg">
             這一頁保留品牌合作、角色授權、社群企劃與商業聯名的聯絡入口。
-            你可以在後續放入正式的合作流程、回覆時程與提案說明。
+            後續可替換成正式信箱、合作流程與詢問表單內容。
           </p>
 
           <div class="mt-10 flex flex-wrap gap-4">
             <a
               href="mailto:hello@example.com"
-              class="rounded-full bg-ink px-7 py-3 text-sm font-bold tracking-[0.18em] text-white uppercase transition hover:bg-black/85"
+              class="rounded-full bg-night px-7 py-3 text-sm font-bold tracking-[0.18em] text-butter transition hover:bg-moss hover:text-white"
             >
-              Email Me
+              EMAIL ME
             </a>
             <a
               href="works.html"
-              class="rounded-full border border-black/12 bg-white px-7 py-3 text-sm font-bold tracking-[0.18em] text-ink uppercase transition hover:border-black/30"
+              class="rounded-full border border-moss/30 bg-white/80 px-7 py-3 text-sm font-bold tracking-[0.18em] text-night transition hover:border-night/35 hover:bg-butter/35"
             >
               先看作品
             </a>
@@ -95,35 +100,31 @@
         </div>
 
         <div class="grid gap-6">
-          <section class="rounded-[1.8rem] border border-black/8 bg-white/82 p-6 shadow-soft backdrop-blur">
-            <p class="text-xs font-bold uppercase tracking-[0.3em] text-ink/38">Contact Info</p>
+          <section class="rounded-[2rem] border border-night/8 bg-white/76 p-6 shadow-cloud">
+            <p class="text-xs font-bold tracking-[0.24em] text-moss">CONTACT INFO</p>
             <div class="mt-6 space-y-5">
               <div>
-                <p class="text-sm text-ink/45">Email</p>
-                <p class="mt-1 text-lg font-bold">hello@example.com</p>
+                <p class="text-sm text-night/48">Email</p>
+                <p class="mt-1 text-lg font-black text-night">hello@example.com</p>
               </div>
               <div>
-                <p class="text-sm text-ink/45">Instagram</p>
-                <p class="mt-1 text-lg font-bold">@placeholder.account</p>
+                <p class="text-sm text-night/48">Instagram</p>
+                <p class="mt-1 text-lg font-black text-night">@placeholder.account</p>
               </div>
               <div>
-                <p class="text-sm text-ink/45">Business Hours</p>
-                <p class="mt-1 text-lg font-bold">Mon - Fri / 10:00 - 18:00</p>
+                <p class="text-sm text-night/48">Business Hours</p>
+                <p class="mt-1 text-lg font-black text-night">Mon - Fri / 10:00 - 18:00</p>
               </div>
             </div>
           </section>
 
-          <section class="rounded-[1.8rem] border border-black/8 bg-white/82 p-6 shadow-soft backdrop-blur">
-            <p class="text-xs font-bold uppercase tracking-[0.3em] text-ink/38">Inquiry Placeholder</p>
-            <div
-              class="mt-6 flex aspect-[4/3] items-center justify-center rounded-[1.4rem] border border-dashed border-stone bg-mist"
-            >
-              <span class="text-xs font-medium uppercase tracking-[0.3em] text-smoke">
-                Form Placeholder
-              </span>
+          <section class="rounded-[2rem] border border-night/8 bg-white/76 p-6 shadow-cloud">
+            <p class="text-xs font-bold tracking-[0.24em] text-moss">FORM PLACEHOLDER</p>
+            <div class="mt-6 flex aspect-[4/3] items-center justify-center rounded-[1.7rem] border-2 border-dashed border-moss/40 bg-haze">
+              <span class="rounded-full bg-white/75 px-4 py-2 text-xs font-bold tracking-[0.22em] text-moss">PLACEHOLDER</span>
             </div>
-            <p class="mt-5 text-sm leading-7 text-ink/65">
-              預留表單、合作需求欄位、預算區間與聯絡備註說明的內容位置。
+            <p class="mt-5 text-sm leading-7 text-night/68">
+              預留合作需求、預算區間、品牌背景與聯絡備註的欄位說明。
             </p>
           </section>
         </div>
