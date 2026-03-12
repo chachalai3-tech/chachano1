@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>打工人精神狀態 | 品牌 IP 作品集</title>
+    <title>打工人精神狀態 | 單頁作品集</title>
     <meta
       name="description"
-      content="打工人精神狀態品牌 IP 展示網站，收錄角色視覺、情境企劃與社群延伸作品。"
+      content="打工人精神狀態是一個以布偶貓角色為主的 IP 品牌單頁式作品集。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,14 +23,15 @@
               sans: ["Noto Sans TC", "sans-serif"],
             },
             colors: {
-              ink: "#111111",
-              paper: "#f6f1e8",
-              ember: "#ff6b3d",
-              clay: "#d94f2a",
-              moss: "#53624d",
+              slate: {
+                950: "#111111",
+              },
+              mist: "#f3f3f1",
+              line: "#d9d9d4",
+              soft: "#7b7b73",
             },
             boxShadow: {
-              float: "0 24px 80px rgba(17, 17, 17, 0.12)",
+              panel: "0 24px 60px rgba(17, 17, 17, 0.06)",
             },
           },
         },
@@ -39,151 +40,181 @@
     <style>
       body {
         background:
-          radial-gradient(circle at top left, rgba(255, 107, 61, 0.18), transparent 28%),
-          radial-gradient(circle at 85% 15%, rgba(83, 98, 77, 0.18), transparent 24%),
-          linear-gradient(180deg, #fcf9f4 0%, #f4ede3 100%);
+          radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 30%),
+          linear-gradient(180deg, #fcfcfa 0%, #f7f7f3 100%);
       }
     </style>
   </head>
-  <body class="font-sans text-ink antialiased">
-    <div class="relative overflow-hidden">
-      <div class="absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.86),_transparent_68%)]"></div>
+  <body class="font-sans text-slate-950 antialiased">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <header class="flex items-center justify-between py-6">
+        <a href="#hero" class="text-sm font-bold tracking-[0.28em] uppercase">Workmind State</a>
+        <nav class="hidden gap-8 text-sm text-slate-950/65 md:flex">
+          <a class="transition hover:text-slate-950" href="#hero">首頁</a>
+          <a class="transition hover:text-slate-950" href="#works">作品</a>
+          <a class="transition hover:text-slate-950" href="#contact">聯絡</a>
+        </nav>
+      </header>
 
-      <header class="mx-auto max-w-7xl px-6 pb-16 pt-8 lg:px-10">
-        <div class="flex items-center justify-between">
-          <a href="#" class="text-sm font-bold tracking-[0.3em] text-clay uppercase">Workmind IP</a>
-          <nav class="hidden gap-6 text-sm font-medium text-ink/70 md:flex">
-            <a href="#works" class="transition hover:text-clay">作品展示</a>
-            <a href="#about" class="transition hover:text-clay">品牌理念</a>
-            <a href="#contact" class="transition hover:text-clay">聯絡方式</a>
-          </nav>
-        </div>
-
+      <main>
         <section
-          id="about"
-          class="mt-16 grid items-center gap-10 rounded-[2rem] border border-white/70 bg-white/70 p-8 shadow-float backdrop-blur md:p-12 lg:grid-cols-[1.2fr_0.8fr]"
+          id="hero"
+          class="flex min-h-[78vh] items-center border-b border-black/6 py-16 md:min-h-[88vh]"
         >
-          <div class="max-w-3xl">
-            <p class="text-sm font-bold uppercase tracking-[0.35em] text-clay">打工人精神狀態</p>
-            <h1 class="mt-5 text-4xl font-black leading-tight text-ink md:text-6xl">
-              把每一個上班瞬間，
-              <span class="text-clay">變成有共鳴的品牌角色宇宙。</span>
-            </h1>
-            <p class="mt-6 max-w-2xl text-base leading-8 text-ink/75 md:text-lg">
-              這是一個以「疲憊、硬撐、苦中作樂」為核心情緒的品牌 IP，將打工人的真實精神狀態轉化為可視化角色、圖像語言與社群敘事，讓壓力被看見，也讓幽默成為識別。
-            </p>
-
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#works"
-                class="rounded-full bg-ink px-6 py-3 text-sm font-bold text-white transition hover:bg-clay"
-              >
-                查看作品
-              </a>
-              <a
-                href="#contact"
-                class="rounded-full border border-ink/15 bg-white px-6 py-3 text-sm font-bold text-ink transition hover:border-clay hover:text-clay"
-              >
-                聯絡合作
-              </a>
+          <div class="grid w-full gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+            <div class="max-w-4xl">
+              <p class="text-sm font-bold uppercase tracking-[0.35em] text-slate-950/45">
+                IP Portfolio
+              </p>
+              <h1 class="mt-6 text-5xl font-black leading-[0.95] tracking-[-0.04em] sm:text-7xl lg:text-[7rem]">
+                打工人
+                <br />
+                精神狀態
+              </h1>
+              <p class="mt-8 max-w-2xl text-base leading-8 text-slate-950/62 sm:text-lg">
+                這裡是以布偶貓角色為主角的 IP 品牌展示頁。預留品牌故事、世界觀、角色設定與系列作品簡介，
+                以極簡排版呈現情緒感、辨識度與延伸應用的可能性。
+              </p>
             </div>
-          </div>
 
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-            <div class="rounded-[1.5rem] bg-ink p-6 text-white">
-              <p class="text-sm tracking-[0.25em] text-white/60 uppercase">Brand Core</p>
-              <p class="mt-4 text-2xl font-bold">崩潰感、共鳴感、傳播感</p>
-            </div>
-            <div class="rounded-[1.5rem] border border-ink/10 bg-paper p-6">
-              <p class="text-sm tracking-[0.25em] text-ink/45 uppercase">Visual Direction</p>
-              <p class="mt-4 text-lg font-bold">高辨識角色輪廓、情緒標語、暖調極簡排版</p>
+            <div class="rounded-[2rem] border border-black/8 bg-white/70 p-6 shadow-panel backdrop-blur">
+              <div
+                class="flex aspect-[4/5] items-center justify-center rounded-[1.5rem] border border-dashed border-line bg-mist"
+              >
+                <span class="text-sm font-medium uppercase tracking-[0.28em] text-soft">
+                  Hero Placeholder
+                </span>
+              </div>
             </div>
           </div>
         </section>
-      </header>
 
-      <main class="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
-        <section id="works">
-          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p class="text-sm font-bold uppercase tracking-[0.35em] text-clay">Portfolio</p>
-              <h2 class="mt-3 text-3xl font-black md:text-4xl">三個面向，描繪打工人日常宇宙</h2>
-            </div>
-            <p class="max-w-xl text-sm leading-7 text-ink/65 md:text-base">
-              以下作品區保留了可替換的主視覺位置，方便你後續直接替換成正式圖稿、貼圖企劃或角色延伸應用。
+        <section id="works" class="py-24 md:py-32">
+          <div class="max-w-3xl">
+            <p class="text-sm font-bold uppercase tracking-[0.35em] text-slate-950/45">Works</p>
+            <h2 class="mt-4 text-3xl font-black tracking-[-0.03em] sm:text-5xl">作品展示</h2>
+            <p class="mt-5 text-base leading-8 text-slate-950/62 sm:text-lg">
+              以乾淨的網格系統規劃六個作品位置，方便後續替換正式視覺、系列提案或商業合作案例。
             </p>
           </div>
 
-          <div class="mt-10 grid gap-6 lg:grid-cols-3">
-            <article class="group overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/80 shadow-float backdrop-blur">
-              <div class="aspect-[4/3] overflow-hidden bg-[#efe2d2]">
-                <img
-                  src="./image/1.png"
-                  alt="角色主視覺展示"
-                  class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
+          <div class="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <article class="rounded-[1.75rem] border border-black/8 bg-white p-5 shadow-panel">
+              <div
+                class="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] border border-dashed border-line bg-mist"
+              >
+                <span class="text-xs font-medium uppercase tracking-[0.3em] text-soft">
+                  Placeholder
+                </span>
               </div>
-              <div class="p-6">
-                <p class="text-xs font-bold uppercase tracking-[0.3em] text-clay">01 / Hero Visual</p>
-                <h3 class="mt-3 text-2xl font-bold">角色主視覺設定</h3>
-                <p class="mt-3 text-sm leading-7 text-ink/70">
-                  聚焦品牌核心角色的神情、造型與情緒姿態，建立「一眼就懂今天上班狀態」的視覺辨識。
-                </p>
-              </div>
+              <h3 class="mt-5 text-xl font-bold tracking-[-0.02em]">動態貼圖設計</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-950/62">
+                預留角色動作表現、情緒節奏與貼圖系列企劃的說明文字。
+              </p>
             </article>
 
-            <article class="group overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/80 shadow-float backdrop-blur">
-              <div class="aspect-[4/3] overflow-hidden bg-[#e8e1d7]">
-                <img
-                  src="./image/2.png"
-                  alt="辦公室情境插畫展示"
-                  class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
+            <article class="rounded-[1.75rem] border border-black/8 bg-white p-5 shadow-panel">
+              <div
+                class="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] border border-dashed border-line bg-mist"
+              >
+                <span class="text-xs font-medium uppercase tracking-[0.3em] text-soft">
+                  Placeholder
+                </span>
               </div>
-              <div class="p-6">
-                <p class="text-xs font-bold uppercase tracking-[0.3em] text-clay">02 / Story Scene</p>
-                <h3 class="mt-3 text-2xl font-bold">辦公室情境系列</h3>
-                <p class="mt-3 text-sm leading-7 text-ink/70">
-                  以會議、加班、薪水日與週一症候群為主題，把真實職場情境變成有戲的品牌內容模組。
-                </p>
-              </div>
+              <h3 class="mt-5 text-xl font-bold tracking-[-0.02em]">品牌聯名企劃</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-950/62">
+                預留聯名概念、產品應用與品牌合作情境的展示內容。
+              </p>
             </article>
 
-            <article class="group overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/80 shadow-float backdrop-blur">
-              <div class="aspect-[4/3] overflow-hidden bg-[#dfd8cc]">
-                <img
-                  src="./image/3.png"
-                  alt="社群延伸設計展示"
-                  class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
+            <article class="rounded-[1.75rem] border border-black/8 bg-white p-5 shadow-panel">
+              <div
+                class="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] border border-dashed border-line bg-mist"
+              >
+                <span class="text-xs font-medium uppercase tracking-[0.3em] text-soft">
+                  Placeholder
+                </span>
               </div>
-              <div class="p-6">
-                <p class="text-xs font-bold uppercase tracking-[0.3em] text-clay">03 / Social Assets</p>
-                <h3 class="mt-3 text-2xl font-bold">社群延伸與商品化</h3>
-                <p class="mt-3 text-sm leading-7 text-ink/70">
-                  延伸成貼文模板、表情貼、桌布與週邊提案，讓品牌 IP 從展示頁自然走向日常使用場景。
-                </p>
+              <h3 class="mt-5 text-xl font-bold tracking-[-0.02em]">角色設定延伸</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-950/62">
+                預留布偶貓角色的姿態、情緒標語與人物關係設計說明。
+              </p>
+            </article>
+
+            <article class="rounded-[1.75rem] border border-black/8 bg-white p-5 shadow-panel">
+              <div
+                class="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] border border-dashed border-line bg-mist"
+              >
+                <span class="text-xs font-medium uppercase tracking-[0.3em] text-soft">
+                  Placeholder
+                </span>
               </div>
+              <h3 class="mt-5 text-xl font-bold tracking-[-0.02em]">社群視覺模板</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-950/62">
+                預留貼文版型、互動企劃與內容系列化的作品介紹文字。
+              </p>
+            </article>
+
+            <article class="rounded-[1.75rem] border border-black/8 bg-white p-5 shadow-panel">
+              <div
+                class="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] border border-dashed border-line bg-mist"
+              >
+                <span class="text-xs font-medium uppercase tracking-[0.3em] text-soft">
+                  Placeholder
+                </span>
+              </div>
+              <h3 class="mt-5 text-xl font-bold tracking-[-0.02em]">周邊商品提案</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-950/62">
+                預留角色商品化方向、包裝視覺與生活應用的展示欄位。
+              </p>
+            </article>
+
+            <article class="rounded-[1.75rem] border border-black/8 bg-white p-5 shadow-panel">
+              <div
+                class="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] border border-dashed border-line bg-mist"
+              >
+                <span class="text-xs font-medium uppercase tracking-[0.3em] text-soft">
+                  Placeholder
+                </span>
+              </div>
+              <h3 class="mt-5 text-xl font-bold tracking-[-0.02em]">展覽空間應用</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-950/62">
+                預留大型輸出、展場視覺與沉浸式品牌體驗的案例簡述。
+              </p>
             </article>
           </div>
         </section>
       </main>
 
-      <footer id="contact" class="mx-auto max-w-7xl px-6 pb-10 lg:px-10">
-        <div class="rounded-[2rem] bg-ink px-8 py-10 text-white md:flex md:items-end md:justify-between md:px-10">
-          <div>
-            <p class="text-sm font-bold uppercase tracking-[0.35em] text-white/55">Contact</p>
-            <h2 class="mt-3 text-3xl font-black">想合作打造更有感的角色品牌？</h2>
-            <p class="mt-4 max-w-2xl text-sm leading-7 text-white/75 md:text-base">
-              歡迎洽談品牌識別、IP 角色設計、社群企劃與內容視覺合作。
+      <footer id="contact" class="border-t border-black/6 py-16 md:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div class="max-w-2xl">
+            <p class="text-sm font-bold uppercase tracking-[0.35em] text-slate-950/45">Contact</p>
+            <h2 class="mt-4 text-3xl font-black tracking-[-0.03em] sm:text-5xl">
+              保留合作與聯絡的乾淨入口。
+            </h2>
+            <p class="mt-5 text-base leading-8 text-slate-950/62 sm:text-lg">
+              可在此放入品牌合作邀約、插畫授權、角色企劃與社群內容合作資訊。
             </p>
           </div>
 
-          <div class="mt-8 space-y-2 text-sm md:mt-0 md:text-right md:text-base">
-            <p><span class="text-white/55">Email</span> hello@workmind-ip.com</p>
-            <p><span class="text-white/55">Instagram</span> @workmind.ip</p>
-            <p><span class="text-white/55">Location</span> Taipei / Remote</p>
+          <div class="flex flex-col gap-4">
+            <a
+              href="mailto:hello@example.com"
+              class="rounded-full border border-black px-6 py-3 text-center text-sm font-bold tracking-[0.18em] uppercase transition hover:bg-black hover:text-white"
+            >
+              Email Contact
+            </a>
+            <div class="flex flex-wrap gap-4 text-sm text-slate-950/55">
+              <a href="#" class="transition hover:text-slate-950">Instagram Placeholder</a>
+              <a href="#" class="transition hover:text-slate-950">Behance Placeholder</a>
+              <a href="#" class="transition hover:text-slate-950">Threads Placeholder</a>
+            </div>
           </div>
+        </div>
+
+        <div class="mt-12 text-xs uppercase tracking-[0.24em] text-slate-950/35">
+          © 2026 Workmind State. All Rights Reserved.
         </div>
       </footer>
     </div>
