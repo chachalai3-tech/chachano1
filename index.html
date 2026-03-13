@@ -10,8 +10,9 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +21,7 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ["M PLUS Rounded 1c", "Noto Sans TC", "sans-serif"],
+              sans: ["cwTeXYen", "Noto Sans TC", "sans-serif"],
             },
             colors: {
               wheat: "#ECCE8E",
@@ -54,14 +55,14 @@
       }
     </style>
   </head>
-  <body class="font-sans text-ink antialiased">
+  <body class="font-sans text-ink antialiased font-medium">
     <header class="fixed inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-10">
         <div class="rounded-3xl border border-ink/10 bg-card/90 px-5 py-4 shadow-soft backdrop-blur">
           <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <a href="#top" class="text-base font-black tracking-[0.14em] text-ink">打工人工作室</a>
+            <a href="#top" class="text-base font-extrabold tracking-[0.08em] text-ink">打工人工作室</a>
 
-            <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-ink/70">
+            <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-ink/70">
               <a href="#services" class="transition hover:text-ink">服務項目</a>
               <a href="#works" class="transition hover:text-ink">精選作品</a>
               <a href="#why-me" class="transition hover:text-ink">個人優勢</a>
@@ -75,10 +76,10 @@
     <main id="top" class="px-4 pb-16 pt-36 sm:px-6 lg:px-10">
       <section class="mx-auto grid min-h-[88vh] max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div class="max-w-3xl">
-          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive shadow-soft">
+          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive shadow-soft">
             品牌社群操盤手 × 視覺企劃 | 賴賴 (Chacha)
           </span>
-          <h1 class="text-balance mt-7 text-5xl font-black leading-[1.05] tracking-[-0.05em] text-ink sm:text-6xl lg:text-[5.6rem]">
+          <h1 class="text-balance mt-7 text-5xl font-extrabold leading-[1.08] tracking-[-0.04em] text-ink sm:text-6xl lg:text-[5.45rem]">
             我要再想想
           </h1>
           <p class="mt-8 max-w-2xl text-base leading-8 text-ink/78 sm:text-lg">
@@ -88,13 +89,13 @@
           <div class="mt-10 flex flex-wrap gap-4">
             <a
               href="#services"
-              class="rounded-3xl bg-olive px-7 py-3 text-sm font-bold tracking-[0.14em] text-wheat shadow-soft transition hover:bg-ink"
+              class="rounded-3xl bg-olive px-7 py-3 text-sm font-extrabold tracking-[0.08em] text-wheat shadow-soft transition hover:bg-ink"
             >
               查看服務項目
             </a>
             <a
               href="#works"
-              class="rounded-3xl border border-ink/12 bg-card/80 px-7 py-3 text-sm font-bold tracking-[0.14em] text-ink transition hover:border-olive/40 hover:bg-card"
+              class="rounded-3xl border border-ink/12 bg-card/80 px-7 py-3 text-sm font-extrabold tracking-[0.08em] text-ink transition hover:border-olive/40 hover:bg-card"
             >
               瀏覽精選作品
             </a>
@@ -103,19 +104,19 @@
 
         <div class="rounded-3xl border border-ink/8 bg-card/72 p-5 shadow-soft sm:p-7">
           <div class="flex aspect-[4/5] items-center justify-center rounded-3xl bg-placeholder">
-            <span class="rounded-2xl bg-white/60 px-4 py-2 text-sm font-bold tracking-[0.18em] text-olive">
-              HERO PLACEHOLDER
-            </span>
+              <span class="rounded-2xl bg-white/60 px-4 py-2 text-sm font-bold tracking-[0.14em] text-olive">
+                HERO PLACEHOLDER
+              </span>
           </div>
         </div>
       </section>
 
       <section id="services" class="mx-auto max-w-7xl py-16 sm:py-24">
         <div class="max-w-3xl">
-          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive">
+          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive">
             SERVICES
           </span>
-          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.18] tracking-[-0.04em] text-ink">
+          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.05rem)] font-extrabold leading-[1.22] tracking-[-0.03em] text-ink">
             用內容、角色與企劃，
             <br />
             幫品牌建立會被記住的溫度。
@@ -129,7 +130,7 @@
                 PLACEHOLDER
               </span>
             </div>
-            <h3 class="mt-6 text-2xl font-black leading-snug text-ink">LINE 貼圖客製與 IP 角色開發</h3>
+            <h3 class="mt-6 text-2xl font-extrabold leading-snug text-ink">LINE 貼圖客製與 IP 角色開發</h3>
             <p class="mt-4 text-sm leading-7 text-ink/72">
               從角色人設、語境設計到 AI 輔助高質量產出，打造高使用率、高擴散力的專屬品牌代言人。
             </p>
@@ -141,7 +142,7 @@
                 PLACEHOLDER
               </span>
             </div>
-            <h3 class="mt-6 text-2xl font-black leading-snug text-ink">品牌社群深度代操</h3>
+            <h3 class="mt-6 text-2xl font-extrabold leading-snug text-ink">品牌社群深度代操</h3>
             <p class="mt-4 text-sm leading-7 text-ink/72">
               告別無效發文！提供具備多重人設切換的文案代筆（KOL / 專家語氣），搭配數據回測與成效優化，建立高黏著度的粉絲互動生態圈。
             </p>
@@ -153,7 +154,7 @@
                 PLACEHOLDER
               </span>
             </div>
-            <h3 class="mt-6 text-2xl font-black leading-snug text-ink">社群圖文與短影音企劃</h3>
+            <h3 class="mt-6 text-2xl font-extrabold leading-snug text-ink">社群圖文與短影音企劃</h3>
             <p class="mt-4 text-sm leading-7 text-ink/72">
               從腳本發想、視覺排版到影音剪輯一條龍服務，創造具備高度話題性的視覺內容。
             </p>
@@ -165,7 +166,7 @@
                 PLACEHOLDER
               </span>
             </div>
-            <h3 class="mt-6 text-2xl font-black leading-snug text-ink">硬知識視覺化轉譯</h3>
+            <h3 class="mt-6 text-2xl font-extrabold leading-snug text-ink">硬知識視覺化轉譯</h3>
             <p class="mt-4 text-sm leading-7 text-ink/72">
               擁有建築與房產硬底子，最擅長將法規、產業新知等生硬資訊，轉譯為秒懂的懶人包與圖解，建立品牌的專業親民感與領域權威。
             </p>
@@ -175,10 +176,10 @@
 
       <section id="works" class="mx-auto max-w-7xl py-16 sm:py-24">
         <div class="max-w-4xl xl:max-w-5xl">
-          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive">
+          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive">
             FEATURED WORK
           </span>
-          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.18] tracking-[-0.04em] text-ink">
+          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.05rem)] font-extrabold leading-[1.22] tracking-[-0.03em] text-ink">
             用真正有成效的案例，
             <br />
             證明內容不只好看，也能帶來商業結果。
@@ -196,7 +197,7 @@
               <span class="inline-flex rounded-full bg-wheat/70 px-3 py-2 text-xs font-bold tracking-[0.18em] text-ink">
                 CASE 01
               </span>
-              <h3 class="mt-5 text-3xl font-black tracking-[-0.03em] text-ink">原創 IP《打工人精神狀態》</h3>
+              <h3 class="mt-5 text-3xl font-extrabold tracking-[-0.02em] text-ink">原創 IP《打工人精神狀態》</h3>
               <p class="mt-5 text-base leading-8 text-ink/76">
                 角色定位：用幽默反差感直擊百萬上班族痛點。超狂成效：霸榜 LINE 原創貼圖單月總銷量 TOP 10，單篇圖文最高觸及 65 萬次。獲百萬 YouTuber 剪輯師及多位知名 KOL 主動愛用推薦。執行範疇：角色設定、手繪結合 AI 產出、社群運營、實體周邊商品開發。
               </p>
@@ -213,7 +214,7 @@
               <span class="inline-flex rounded-full bg-wheat/70 px-3 py-2 text-xs font-bold tracking-[0.18em] text-ink">
                 CASE 02
               </span>
-              <h3 class="mt-5 text-3xl font-black tracking-[-0.03em] text-ink">大型房產平台社群操盤</h3>
+              <h3 class="mt-5 text-3xl font-extrabold tracking-[-0.02em] text-ink">大型房產平台社群操盤</h3>
               <p class="mt-5 text-base leading-8 text-ink/76">
                 行銷實績：統籌管理雙北 16 個區域社團（累計 33 萬受眾）。成功策劃單次 O2O 行銷活動導流 8,000+ 人次參與；YouTube 影音單支最高突破 26 萬點閱。執行範疇：KOL 內容代操、時事圖文轉譯、年度大型整合行銷企劃、線下實體說明會統籌。
               </p>
@@ -224,10 +225,10 @@
 
       <section id="why-me" class="mx-auto max-w-7xl py-16 sm:py-24">
         <div class="max-w-5xl">
-          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive">
+          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive">
             WHY ME
           </span>
-          <h2 class="text-balance mt-6 text-[clamp(2rem,4.2vw,3.4rem)] font-black leading-[1.16] tracking-[-0.045em] text-ink">
+          <h2 class="text-balance mt-6 text-[clamp(1.9rem,3.9vw,3.05rem)] font-extrabold leading-[1.24] tracking-[-0.025em] text-ink">
             最懂人心的創作者，最懂共鳴的社群操盤手。
           </h2>
         </div>
@@ -237,7 +238,7 @@
             <div class="flex h-16 w-16 items-center justify-center rounded-3xl bg-wheat/70 text-xl font-black text-ink">
               01
             </div>
-            <h3 class="mt-6 text-3xl font-black tracking-[-0.03em] text-ink">手繪 × AI 的極效產能</h3>
+            <h3 class="mt-6 text-3xl font-extrabold tracking-[-0.02em] text-ink">手繪 × AI 的極效產能</h3>
             <p class="mt-5 text-base leading-8 text-ink/76">
               深入研究 AI 工具應用，能將 80% 的精力投入在最核心的「創意發想與故事講述」上。確保視覺風格高度一致，並能快速回應社群時事梗。
             </p>
@@ -247,7 +248,7 @@
             <div class="flex h-16 w-16 items-center justify-center rounded-3xl bg-wheat/70 text-xl font-black text-ink">
               02
             </div>
-            <h3 class="mt-6 text-3xl font-black tracking-[-0.03em] text-ink">轉換率底層邏輯商業思維</h3>
+            <h3 class="mt-6 text-3xl font-extrabold tracking-[-0.02em] text-ink">轉換率底層邏輯商業思維</h3>
             <p class="mt-5 text-base leading-8 text-ink/76">
               具備豐富的專案 KPI 管理經驗，我懂受眾在想什麼、懂社群流量密碼，更懂得如何將數位內容引導至實體變現。
             </p>
@@ -257,10 +258,10 @@
 
       <section id="contact" class="mx-auto max-w-5xl py-16 sm:py-24">
         <div class="rounded-3xl bg-card px-6 py-12 text-center shadow-soft sm:px-10 sm:py-16">
-          <span class="inline-flex rounded-full bg-wheat/70 px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive">
+          <span class="inline-flex rounded-full bg-wheat/70 px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive">
             LET'S TALK
           </span>
-          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.18] tracking-[-0.04em] text-ink">
+          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.05rem)] font-extrabold leading-[1.22] tracking-[-0.03em] text-ink">
             準備好讓你的品牌擁有靈魂了嗎？
           </h2>
           <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-ink/76 sm:text-lg">
