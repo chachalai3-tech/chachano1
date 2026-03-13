@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +20,7 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Noto Sans TC", "sans-serif"],
+              sans: ["M PLUS Rounded 1c", "Noto Sans TC", "sans-serif"],
             },
             colors: {
               wheat: "#ECCE8E",
@@ -39,6 +39,11 @@
     <style>
       html {
         scroll-behavior: smooth;
+      }
+
+      .text-balance {
+        text-wrap: balance;
+        word-break: keep-all;
       }
 
       body {
@@ -73,7 +78,7 @@
           <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive shadow-soft">
             品牌社群操盤手 × 視覺企劃 | 賴賴 (Chacha)
           </span>
-          <h1 class="mt-7 text-5xl font-black leading-[1.02] tracking-[-0.05em] text-ink sm:text-6xl lg:text-[5.8rem]">
+          <h1 class="text-balance mt-7 text-5xl font-black leading-[1.05] tracking-[-0.05em] text-ink sm:text-6xl lg:text-[5.6rem]">
             我要再想想
           </h1>
           <p class="mt-8 max-w-2xl text-base leading-8 text-ink/78 sm:text-lg">
@@ -110,7 +115,7 @@
           <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive">
             SERVICES
           </span>
-          <h2 class="mt-6 text-4xl font-black leading-tight tracking-[-0.04em] text-ink sm:text-5xl">
+          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.18] tracking-[-0.04em] text-ink">
             用內容、角色與企劃，
             <br />
             幫品牌建立會被記住的溫度。
@@ -169,11 +174,11 @@
       </section>
 
       <section id="works" class="mx-auto max-w-7xl py-16 sm:py-24">
-        <div class="max-w-3xl">
+        <div class="max-w-4xl xl:max-w-5xl">
           <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive">
             FEATURED WORK
           </span>
-          <h2 class="mt-6 text-4xl font-black leading-tight tracking-[-0.04em] text-ink sm:text-5xl">
+          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.18] tracking-[-0.04em] text-ink">
             用真正有成效的案例，
             <br />
             證明內容不只好看，也能帶來商業結果。
@@ -218,11 +223,11 @@
       </section>
 
       <section id="why-me" class="mx-auto max-w-7xl py-16 sm:py-24">
-        <div class="max-w-4xl">
+        <div class="max-w-5xl">
           <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive">
             WHY ME
           </span>
-          <h2 class="mt-6 text-4xl font-black leading-tight tracking-[-0.04em] text-ink sm:text-5xl">
+          <h2 class="text-balance mt-6 text-[clamp(2rem,4.2vw,3.4rem)] font-black leading-[1.16] tracking-[-0.045em] text-ink">
             最懂人心的創作者，最懂共鳴的社群操盤手。
           </h2>
         </div>
@@ -255,7 +260,7 @@
           <span class="inline-flex rounded-full bg-wheat/70 px-4 py-2 text-xs font-bold tracking-[0.22em] text-olive">
             LET'S TALK
           </span>
-          <h2 class="mt-6 text-4xl font-black leading-tight tracking-[-0.04em] text-ink sm:text-5xl">
+          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.18] tracking-[-0.04em] text-ink">
             準備好讓你的品牌擁有靈魂了嗎？
           </h2>
           <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-ink/76 sm:text-lg">
