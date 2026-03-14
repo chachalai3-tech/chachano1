@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>打工人工作室 | 個人接案網站</title>
+    <title>打工人工作室 | Visual Portfolio</title>
     <meta
       name="description"
-      content="打工人工作室個人接案網站，提供品牌社群操盤、視覺企劃、原創 IP 打造與內容轉譯服務。"
+      content="打工人工作室單頁式接案網站，以視覺導向呈現品牌企劃、社群操盤與 IP 內容設計。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@master/font/jf-openhuninn-2.1.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -21,17 +24,24 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ["cwTeXYen", "Noto Sans TC", "sans-serif"],
+              sans: ["jf-openhuninn-2.1", "Noto Sans TC", "sans-serif"],
+              display: ["Outfit", "Noto Sans TC", "sans-serif"],
             },
             colors: {
-              wheat: "#ECCE8E",
-              ink: "#270722",
-              olive: "#928B67",
-              card: "#fffaf0",
-              placeholder: "#e9e7df",
+              shell: "#EAE8FF",
+              mist: "#d8d5db",
+              sage: "#adacb5",
+              ink: "#2D3142",
+              paper: "#f6f4ff",
+              line: "rgba(45, 49, 66, 0.08)",
             },
             boxShadow: {
-              soft: "0 24px 60px rgba(39, 7, 34, 0.10)",
+              glow: "0 24px 80px rgba(45, 49, 66, 0.12)",
+              float: "0 18px 40px rgba(45, 49, 66, 0.10)",
+            },
+            backgroundImage: {
+              haze:
+                "radial-gradient(circle at top left, rgba(234, 232, 255, 0.96), transparent 32%), radial-gradient(circle at 78% 20%, rgba(173, 172, 181, 0.32), transparent 26%), linear-gradient(180deg, #f6f4ff 0%, #eae8ff 48%, #d8d5db 100%)",
             },
           },
         },
@@ -42,250 +52,310 @@
         scroll-behavior: smooth;
       }
 
+      body {
+        background-image: radial-gradient(circle at top left, rgba(234, 232, 255, 0.96), transparent 32%),
+          radial-gradient(circle at 78% 20%, rgba(173, 172, 181, 0.32), transparent 26%),
+          linear-gradient(180deg, #f6f4ff 0%, #eae8ff 48%, #d8d5db 100%);
+      }
+
+      .mesh {
+        background-image: linear-gradient(rgba(45, 49, 66, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(45, 49, 66, 0.05) 1px, transparent 1px);
+        background-size: 28px 28px;
+        mask-image: radial-gradient(circle at center, black 36%, transparent 82%);
+      }
+
       .text-balance {
         text-wrap: balance;
         word-break: keep-all;
       }
 
-      body {
-        background:
-          radial-gradient(circle at top left, rgba(255, 250, 240, 0.65), transparent 26%),
-          radial-gradient(circle at 82% 16%, rgba(146, 139, 103, 0.18), transparent 20%),
-          linear-gradient(180deg, #ecce8e 0%, #f3dca9 100%);
+      .float-slow {
+        animation: float-slow 8s ease-in-out infinite;
+      }
+
+      .float-delay {
+        animation: float-slow 10s ease-in-out infinite 1.2s;
+      }
+
+      .shimmer::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.45) 50%, transparent 80%);
+        transform: translateX(-120%);
+        transition: transform 0.9s ease;
+      }
+
+      .shimmer:hover::after {
+        transform: translateX(120%);
+      }
+
+      @keyframes float-slow {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
       }
     </style>
   </head>
-  <body class="font-sans text-ink antialiased font-medium">
-    <header class="fixed inset-x-0 top-0 z-50">
-      <div class="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-10">
-        <div class="rounded-3xl border border-ink/10 bg-card/90 px-5 py-4 shadow-soft backdrop-blur">
-          <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <a href="#top" class="text-base font-extrabold tracking-[0.08em] text-ink">打工人工作室</a>
+  <body class="font-sans text-ink antialiased">
+    <div class="fixed inset-0 -z-10 mesh opacity-40"></div>
 
-            <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-ink/70">
-              <a href="#services" class="transition hover:text-ink">服務項目</a>
-              <a href="#works" class="transition hover:text-ink">精選作品</a>
-              <a href="#why-me" class="transition hover:text-ink">個人優勢</a>
-              <a href="#contact" class="transition hover:text-ink">聯絡我</a>
-            </nav>
-          </div>
+    <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-10">
+      <div class="mx-auto max-w-7xl rounded-[2rem] border border-line bg-paper/78 px-5 py-4 shadow-float backdrop-blur-xl">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <a href="#top" class="font-display text-sm font-semibold uppercase tracking-[0.32em] text-ink">
+            Chacha Studio
+          </a>
+          <nav class="flex flex-wrap gap-2 text-sm">
+            <a href="#services" class="rounded-full px-4 py-2 text-ink/68 transition hover:bg-white/60 hover:text-ink">
+              服務項目
+            </a>
+            <a href="#works" class="rounded-full px-4 py-2 text-ink/68 transition hover:bg-white/60 hover:text-ink">
+              精選作品
+            </a>
+            <a href="#why-me" class="rounded-full px-4 py-2 text-ink/68 transition hover:bg-white/60 hover:text-ink">
+              個人優勢
+            </a>
+            <a href="#contact" class="rounded-full bg-ink px-4 py-2 text-shell transition hover:-translate-y-0.5 hover:bg-sage hover:text-ink">
+              聯絡我
+            </a>
+          </nav>
         </div>
       </div>
     </header>
 
-    <main id="top" class="px-4 pb-16 pt-36 sm:px-6 lg:px-10">
-      <section class="mx-auto grid min-h-[88vh] max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div class="max-w-3xl">
-          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive shadow-soft">
-            品牌社群操盤手 × 視覺企劃 | 賴賴 (Chacha)
-          </span>
-          <h1 class="text-balance mt-7 text-5xl font-extrabold leading-[1.08] tracking-[-0.04em] text-ink sm:text-6xl lg:text-[5.45rem]">
-            我要再想想
-          </h1>
-          <p class="mt-8 max-w-2xl text-base leading-8 text-ink/78 sm:text-lg">
-            結合 8 年跨界行銷經驗與 AI 視覺技術，將生硬的資訊轉化為引發共鳴的社群語言。從 0 到 1 的原創 IP 打造，到統籌 33 萬規模的分眾社群，用懂人心的企劃力，為品牌注入真實的溫度與商業價值。
-          </p>
+    <main id="top" class="px-4 pb-16 pt-32 sm:px-6 lg:px-10">
+      <section class="mx-auto grid min-h-[92vh] max-w-7xl gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+        <div class="relative">
+          <div class="float-slow absolute -left-6 top-0 hidden h-24 w-24 rounded-[2rem] border border-white/60 bg-white/35 blur-[1px] lg:block"></div>
+          <div class="float-delay absolute right-8 top-20 hidden h-16 w-16 rounded-full border border-ink/8 bg-sage/30 lg:block"></div>
 
-          <div class="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#services"
-              class="rounded-3xl bg-olive px-7 py-3 text-sm font-extrabold tracking-[0.08em] text-wheat shadow-soft transition hover:bg-ink"
-            >
-              查看服務項目
-            </a>
-            <a
-              href="#works"
-              class="rounded-3xl border border-ink/12 bg-card/80 px-7 py-3 text-sm font-extrabold tracking-[0.08em] text-ink transition hover:border-olive/40 hover:bg-card"
-            >
-              瀏覽精選作品
-            </a>
+          <div class="relative rounded-[2.5rem] border border-line bg-paper/72 p-8 shadow-glow backdrop-blur-xl sm:p-10">
+            <span class="inline-flex rounded-full border border-white/80 bg-white/70 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.28em] text-ink/70">
+              BRAND STRATEGY × VISUAL IDEA
+            </span>
+            <h1 class="text-balance mt-7 max-w-4xl font-display text-[clamp(3rem,8vw,6.4rem)] font-semibold leading-[0.92] tracking-[-0.06em] text-ink">
+              社群要有感，
+              <br />
+              視覺也要有戲。
+            </h1>
+            <p class="mt-7 max-w-2xl text-base leading-8 text-ink/68 sm:text-lg">
+              我做角色、內容與社群企劃。把資訊變好看，也把品牌做得更有記憶點。
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#works"
+                class="rounded-[1.6rem] bg-ink px-6 py-3 font-display text-sm font-semibold uppercase tracking-[0.22em] text-shell transition hover:-translate-y-1 hover:bg-sage hover:text-ink"
+              >
+                View Works
+              </a>
+              <a
+                href="#services"
+                class="rounded-[1.6rem] border border-ink/10 bg-white/70 px-6 py-3 font-display text-sm font-semibold uppercase tracking-[0.22em] text-ink transition hover:-translate-y-1 hover:border-ink/20 hover:bg-white"
+              >
+                Explore Services
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="rounded-3xl border border-ink/8 bg-card/72 p-5 shadow-soft sm:p-7">
-          <div class="flex aspect-[4/5] items-center justify-center rounded-3xl bg-placeholder">
-              <span class="rounded-2xl bg-white/60 px-4 py-2 text-sm font-bold tracking-[0.14em] text-olive">
-                HERO PLACEHOLDER
-              </span>
+        <div class="grid gap-5">
+          <div class="group shimmer relative overflow-hidden rounded-[2.8rem] border border-line bg-paper/82 p-5 shadow-glow backdrop-blur-xl transition duration-500 hover:-translate-y-2">
+            <div class="flex aspect-[4/5] items-end justify-between rounded-[2.2rem] bg-gradient-to-br from-white/80 via-shell to-mist p-5">
+              <div class="space-y-3">
+                <span class="inline-flex rounded-full bg-white/70 px-3 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.26em] text-ink/62">
+                  Hero Frame
+                </span>
+                <div class="h-24 w-24 rounded-[1.8rem] bg-white/70"></div>
+              </div>
+              <div class="h-48 w-40 rounded-[2rem] bg-white/60 shadow-inner"></div>
+            </div>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="rounded-[2rem] border border-line bg-white/58 p-5 shadow-float transition duration-500 hover:-translate-y-2 hover:bg-white/80">
+              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.26em] text-ink/50">Identity</p>
+              <p class="mt-3 text-xl text-ink">角色感</p>
+            </div>
+            <div class="rounded-[2rem] border border-line bg-white/58 p-5 shadow-float transition duration-500 hover:-translate-y-2 hover:bg-white/80">
+              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.26em] text-ink/50">Social</p>
+              <p class="mt-3 text-xl text-ink">話題感</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="services" class="mx-auto max-w-7xl py-16 sm:py-24">
-        <div class="max-w-3xl">
-          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive">
-            SERVICES
-          </span>
-          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.05rem)] font-extrabold leading-[1.22] tracking-[-0.03em] text-ink">
-            用內容、角色與企劃，
-            <br />
-            幫品牌建立會被記住的溫度。
-          </h2>
+      <section id="services" class="mx-auto max-w-7xl py-20">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <span class="inline-flex rounded-full border border-white/80 bg-white/70 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.28em] text-ink/65">
+              Services
+            </span>
+            <h2 class="text-balance mt-6 max-w-3xl font-display text-[clamp(2.2rem,5vw,4.5rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-ink">
+              做得精準，也做得有視覺情緒。
+            </h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-ink/58 sm:text-base">
+            文字先縮短，把視覺節奏拉出來。這一版先讓版型說話。
+          </p>
         </div>
 
         <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <article class="rounded-3xl bg-card p-6 shadow-soft">
-            <div class="flex aspect-[4/3] items-center justify-center rounded-3xl bg-placeholder">
-              <span class="rounded-2xl bg-white/60 px-3 py-2 text-xs font-bold tracking-[0.18em] text-olive">
-                PLACEHOLDER
-              </span>
+          <article class="group rounded-[2.2rem] border border-line bg-paper/72 p-6 shadow-float transition duration-500 hover:-translate-y-3 hover:rotate-[-1deg] hover:shadow-glow">
+            <div class="flex aspect-[4/3] items-center justify-center rounded-[1.8rem] bg-mist transition duration-500 group-hover:bg-white">
+              <span class="font-display text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/45">01 / IP</span>
             </div>
-            <h3 class="mt-6 text-2xl font-extrabold leading-snug text-ink">LINE 貼圖客製與 IP 角色開發</h3>
-            <p class="mt-4 text-sm leading-7 text-ink/72">
-              從角色人設、語境設計到 AI 輔助高質量產出，打造高使用率、高擴散力的專屬品牌代言人。
-            </p>
+            <h3 class="mt-6 text-2xl leading-snug text-ink">LINE 貼圖與角色開發</h3>
+            <p class="mt-4 text-sm leading-7 text-ink/62">角色設定、語境設計、AI 輔助產出。</p>
           </article>
 
-          <article class="rounded-3xl bg-card p-6 shadow-soft">
-            <div class="flex aspect-[4/3] items-center justify-center rounded-3xl bg-placeholder">
-              <span class="rounded-2xl bg-white/60 px-3 py-2 text-xs font-bold tracking-[0.18em] text-olive">
-                PLACEHOLDER
-              </span>
+          <article class="group rounded-[2.2rem] border border-line bg-paper/72 p-6 shadow-float transition duration-500 hover:-translate-y-3 hover:rotate-[1deg] hover:shadow-glow">
+            <div class="flex aspect-[4/3] items-center justify-center rounded-[1.8rem] bg-mist transition duration-500 group-hover:bg-white">
+              <span class="font-display text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/45">02 / Social</span>
             </div>
-            <h3 class="mt-6 text-2xl font-extrabold leading-snug text-ink">品牌社群深度代操</h3>
-            <p class="mt-4 text-sm leading-7 text-ink/72">
-              告別無效發文！提供具備多重人設切換的文案代筆（KOL / 專家語氣），搭配數據回測與成效優化，建立高黏著度的粉絲互動生態圈。
-            </p>
+            <h3 class="mt-6 text-2xl leading-snug text-ink">品牌社群代操</h3>
+            <p class="mt-4 text-sm leading-7 text-ink/62">文案語氣、人設切換、成效優化。</p>
           </article>
 
-          <article class="rounded-3xl bg-card p-6 shadow-soft">
-            <div class="flex aspect-[4/3] items-center justify-center rounded-3xl bg-placeholder">
-              <span class="rounded-2xl bg-white/60 px-3 py-2 text-xs font-bold tracking-[0.18em] text-olive">
-                PLACEHOLDER
-              </span>
+          <article class="group rounded-[2.2rem] border border-line bg-paper/72 p-6 shadow-float transition duration-500 hover:-translate-y-3 hover:rotate-[-1deg] hover:shadow-glow">
+            <div class="flex aspect-[4/3] items-center justify-center rounded-[1.8rem] bg-mist transition duration-500 group-hover:bg-white">
+              <span class="font-display text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/45">03 / Motion</span>
             </div>
-            <h3 class="mt-6 text-2xl font-extrabold leading-snug text-ink">社群圖文與短影音企劃</h3>
-            <p class="mt-4 text-sm leading-7 text-ink/72">
-              從腳本發想、視覺排版到影音剪輯一條龍服務，創造具備高度話題性的視覺內容。
-            </p>
+            <h3 class="mt-6 text-2xl leading-snug text-ink">圖文與短影音企劃</h3>
+            <p class="mt-4 text-sm leading-7 text-ink/62">腳本、視覺排版、剪輯整合。</p>
           </article>
 
-          <article class="rounded-3xl bg-card p-6 shadow-soft">
-            <div class="flex aspect-[4/3] items-center justify-center rounded-3xl bg-placeholder">
-              <span class="rounded-2xl bg-white/60 px-3 py-2 text-xs font-bold tracking-[0.18em] text-olive">
-                PLACEHOLDER
-              </span>
+          <article class="group rounded-[2.2rem] border border-line bg-paper/72 p-6 shadow-float transition duration-500 hover:-translate-y-3 hover:rotate-[1deg] hover:shadow-glow">
+            <div class="flex aspect-[4/3] items-center justify-center rounded-[1.8rem] bg-mist transition duration-500 group-hover:bg-white">
+              <span class="font-display text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/45">04 / Translate</span>
             </div>
-            <h3 class="mt-6 text-2xl font-extrabold leading-snug text-ink">硬知識視覺化轉譯</h3>
-            <p class="mt-4 text-sm leading-7 text-ink/72">
-              擁有建築與房產硬底子，最擅長將法規、產業新知等生硬資訊，轉譯為秒懂的懶人包與圖解，建立品牌的專業親民感與領域權威。
-            </p>
+            <h3 class="mt-6 text-2xl leading-snug text-ink">硬知識視覺轉譯</h3>
+            <p class="mt-4 text-sm leading-7 text-ink/62">法規、產業資訊、懶人包圖解。</p>
           </article>
         </div>
       </section>
 
-      <section id="works" class="mx-auto max-w-7xl py-16 sm:py-24">
-        <div class="max-w-4xl xl:max-w-5xl">
-          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive">
-            FEATURED WORK
+      <section id="works" class="mx-auto max-w-7xl py-20">
+        <div>
+          <span class="inline-flex rounded-full border border-white/80 bg-white/70 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.28em] text-ink/65">
+            Featured Work
           </span>
-          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.05rem)] font-extrabold leading-[1.22] tracking-[-0.03em] text-ink">
-            用真正有成效的案例，
-            <br />
-            證明內容不只好看，也能帶來商業結果。
+          <h2 class="text-balance mt-6 max-w-4xl font-display text-[clamp(2.2rem,5vw,4.5rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-ink">
+            不是把內容堆滿，而是讓重點自己浮出來。
           </h2>
         </div>
 
         <div class="mt-12 space-y-8">
-          <article class="grid gap-6 rounded-3xl bg-card p-6 shadow-soft lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:p-8">
-            <div class="flex aspect-[16/10] items-center justify-center rounded-3xl bg-placeholder">
-              <span class="rounded-2xl bg-white/60 px-4 py-2 text-sm font-bold tracking-[0.18em] text-olive">
-                PROJECT PLACEHOLDER
-              </span>
+          <article class="group grid gap-6 rounded-[2.5rem] border border-line bg-paper/76 p-6 shadow-glow transition duration-500 hover:-translate-y-2 lg:grid-cols-[0.92fr_1.08fr] lg:p-8">
+            <div class="relative overflow-hidden rounded-[2rem] bg-mist">
+              <div class="flex aspect-[16/10] items-center justify-center bg-gradient-to-br from-white/70 via-shell to-mist">
+                <span class="rounded-full bg-white/76 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.26em] text-ink/52">
+                  Signature IP
+                </span>
+              </div>
+              <div class="absolute inset-x-6 bottom-6 h-10 rounded-full bg-white/35 blur-xl transition duration-500 group-hover:scale-110"></div>
             </div>
-            <div>
-              <span class="inline-flex rounded-full bg-wheat/70 px-3 py-2 text-xs font-bold tracking-[0.18em] text-ink">
-                CASE 01
-              </span>
-              <h3 class="mt-5 text-3xl font-extrabold tracking-[-0.02em] text-ink">原創 IP《打工人精神狀態》</h3>
-              <p class="mt-5 text-base leading-8 text-ink/76">
-                角色定位：用幽默反差感直擊百萬上班族痛點。超狂成效：霸榜 LINE 原創貼圖單月總銷量 TOP 10，單篇圖文最高觸及 65 萬次。獲百萬 YouTuber 剪輯師及多位知名 KOL 主動愛用推薦。執行範疇：角色設定、手繪結合 AI 產出、社群運營、實體周邊商品開發。
+            <div class="flex flex-col justify-center">
+              <span class="font-display text-[11px] font-semibold uppercase tracking-[0.28em] text-ink/46">Case 01</span>
+              <h3 class="mt-4 font-display text-[clamp(1.8rem,3vw,3rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-ink">
+                原創 IP《打工人精神狀態》
+              </h3>
+              <p class="mt-5 text-sm leading-8 text-ink/62 sm:text-base">
+                幽默反差、角色共鳴、貼圖熱度與社群擴散，全部被整合成一個會被主動分享的品牌語言。
               </p>
             </div>
           </article>
 
-          <article class="grid gap-6 rounded-3xl bg-card p-6 shadow-soft lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:p-8">
-            <div class="flex aspect-[16/10] items-center justify-center rounded-3xl bg-placeholder">
-              <span class="rounded-2xl bg-white/60 px-4 py-2 text-sm font-bold tracking-[0.18em] text-olive">
-                PROJECT PLACEHOLDER
-              </span>
+          <article class="group grid gap-6 rounded-[2.5rem] border border-line bg-paper/76 p-6 shadow-glow transition duration-500 hover:-translate-y-2 lg:grid-cols-[0.92fr_1.08fr] lg:p-8">
+            <div class="relative overflow-hidden rounded-[2rem] bg-mist">
+              <div class="flex aspect-[16/10] items-center justify-center bg-gradient-to-br from-white/70 via-shell to-mist">
+                <span class="rounded-full bg-white/76 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.26em] text-ink/52">
+                  Social Scale
+                </span>
+              </div>
+              <div class="absolute inset-x-6 bottom-6 h-10 rounded-full bg-white/35 blur-xl transition duration-500 group-hover:scale-110"></div>
             </div>
-            <div>
-              <span class="inline-flex rounded-full bg-wheat/70 px-3 py-2 text-xs font-bold tracking-[0.18em] text-ink">
-                CASE 02
-              </span>
-              <h3 class="mt-5 text-3xl font-extrabold tracking-[-0.02em] text-ink">大型房產平台社群操盤</h3>
-              <p class="mt-5 text-base leading-8 text-ink/76">
-                行銷實績：統籌管理雙北 16 個區域社團（累計 33 萬受眾）。成功策劃單次 O2O 行銷活動導流 8,000+ 人次參與；YouTube 影音單支最高突破 26 萬點閱。執行範疇：KOL 內容代操、時事圖文轉譯、年度大型整合行銷企劃、線下實體說明會統籌。
+            <div class="flex flex-col justify-center">
+              <span class="font-display text-[11px] font-semibold uppercase tracking-[0.28em] text-ink/46">Case 02</span>
+              <h3 class="mt-4 font-display text-[clamp(1.8rem,3vw,3rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-ink">
+                大型房產平台社群操盤
+              </h3>
+              <p class="mt-5 text-sm leading-8 text-ink/62 sm:text-base">
+                從內容節奏到活動轉單，把大規模社群做得不只是熱鬧，而是真的有流量價值。
               </p>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="why-me" class="mx-auto max-w-7xl py-16 sm:py-24">
-        <div class="max-w-5xl">
-          <span class="inline-flex rounded-full bg-card px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive">
-            WHY ME
-          </span>
-          <h2 class="text-balance mt-6 text-[clamp(1.9rem,3.9vw,3.05rem)] font-extrabold leading-[1.24] tracking-[-0.025em] text-ink">
-            最懂人心的創作者，最懂共鳴的社群操盤手。
-          </h2>
-        </div>
-
-        <div class="mt-12 grid gap-6 lg:grid-cols-2">
-          <article class="rounded-3xl bg-card p-8 shadow-soft">
-            <div class="flex h-16 w-16 items-center justify-center rounded-3xl bg-wheat/70 text-xl font-black text-ink">
-              01
-            </div>
-            <h3 class="mt-6 text-3xl font-extrabold tracking-[-0.02em] text-ink">手繪 × AI 的極效產能</h3>
-            <p class="mt-5 text-base leading-8 text-ink/76">
-              深入研究 AI 工具應用，能將 80% 的精力投入在最核心的「創意發想與故事講述」上。確保視覺風格高度一致，並能快速回應社群時事梗。
-            </p>
-          </article>
-
-          <article class="rounded-3xl bg-card p-8 shadow-soft">
-            <div class="flex h-16 w-16 items-center justify-center rounded-3xl bg-wheat/70 text-xl font-black text-ink">
-              02
-            </div>
-            <h3 class="mt-6 text-3xl font-extrabold tracking-[-0.02em] text-ink">轉換率底層邏輯商業思維</h3>
-            <p class="mt-5 text-base leading-8 text-ink/76">
-              具備豐富的專案 KPI 管理經驗，我懂受眾在想什麼、懂社群流量密碼，更懂得如何將數位內容引導至實體變現。
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="mx-auto max-w-5xl py-16 sm:py-24">
-        <div class="rounded-3xl bg-card px-6 py-12 text-center shadow-soft sm:px-10 sm:py-16">
-          <span class="inline-flex rounded-full bg-wheat/70 px-4 py-2 text-xs font-bold tracking-[0.18em] text-olive">
-            LET'S TALK
-          </span>
-          <h2 class="text-balance mt-6 text-[clamp(2rem,4vw,3.05rem)] font-extrabold leading-[1.22] tracking-[-0.03em] text-ink">
-            準備好讓你的品牌擁有靈魂了嗎？
-          </h2>
-          <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-ink/76 sm:text-lg">
-            無論是需要一個引爆話題的 IP 角色，還是全方位的社群升級計畫，都歡迎與我聊聊。
-          </p>
-
-          <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="mailto:chachalai3@gmail.com"
-              class="w-full rounded-3xl bg-olive px-7 py-4 text-center text-sm font-bold tracking-[0.08em] text-wheat shadow-soft transition hover:bg-ink sm:w-auto"
-            >
-              ✉️ 寫信給我，討論你的專案
-            </a>
-            <button
-              type="button"
-              disabled
-              class="w-full cursor-not-allowed rounded-3xl bg-stone-300 px-7 py-4 text-sm font-bold tracking-[0.08em] text-stone-600 sm:w-auto"
-            >
-              💬 加入官方 LINE (籌備中)
-            </button>
+      <section id="why-me" class="mx-auto max-w-7xl py-20">
+        <div class="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
+          <div class="rounded-[2.5rem] border border-line bg-paper/78 p-8 shadow-glow">
+            <span class="inline-flex rounded-full border border-white/80 bg-white/70 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.28em] text-ink/65">
+              Why Me
+            </span>
+            <h2 class="text-balance mt-6 font-display text-[clamp(2.1rem,5vw,4.1rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-ink">
+              我做的不是素材，
+              <br />
+              是品牌被記住的方式。
+            </h2>
           </div>
 
-          <div class="mt-10 border-t border-ink/10 pt-6 text-sm text-ink/55">
-            © 2026 打工人工作室 Chacha. All rights reserved.
+          <div class="grid gap-6 sm:grid-cols-2">
+            <article class="rounded-[2.2rem] border border-line bg-white/68 p-7 shadow-float transition duration-500 hover:-translate-y-3 hover:bg-white/85">
+              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/46">Advantage 01</p>
+              <h3 class="mt-5 text-2xl leading-snug text-ink">手繪 × AI 的高效率產能</h3>
+              <p class="mt-4 text-sm leading-7 text-ink/62">風格一致、反應快，能追時事也能保留品牌特色。</p>
+            </article>
+
+            <article class="rounded-[2.2rem] border border-line bg-white/68 p-7 shadow-float transition duration-500 hover:-translate-y-3 hover:bg-white/85">
+              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/46">Advantage 02</p>
+              <h3 class="mt-5 text-2xl leading-snug text-ink">懂流量，也懂轉換</h3>
+              <p class="mt-4 text-sm leading-7 text-ink/62">我不只做內容好看，也會從商業結果反推企劃怎麼成立。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-6xl py-20">
+        <div class="relative overflow-hidden rounded-[2.8rem] border border-line bg-ink px-8 py-12 text-shell shadow-glow sm:px-12 sm:py-16">
+          <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-shell/10 blur-3xl"></div>
+          <div class="absolute -bottom-12 left-8 h-36 w-36 rounded-full bg-sage/20 blur-3xl"></div>
+
+          <div class="relative text-center">
+            <span class="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.28em] text-shell/72">
+              Contact
+            </span>
+            <h2 class="text-balance mt-6 font-display text-[clamp(2.2rem,5vw,4.5rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-shell">
+              如果你也想讓品牌
+              <br />
+              看起來更有靈魂，我們可以聊聊。
+            </h2>
+            <p class="mx-auto mt-6 max-w-2xl text-sm leading-8 text-shell/72 sm:text-base">
+              角色、社群、圖文、企劃，這一頁先不講太滿，合作細節我們直接對話。
+            </p>
+
+            <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a
+                href="mailto:chachalai3@gmail.com"
+                class="rounded-[1.6rem] bg-shell px-7 py-4 font-display text-sm font-semibold uppercase tracking-[0.2em] text-ink transition hover:-translate-y-1 hover:bg-white"
+              >
+                Email Me
+              </a>
+              <button
+                type="button"
+                disabled
+                class="rounded-[1.6rem] border border-white/15 bg-white/8 px-7 py-4 font-display text-sm font-semibold uppercase tracking-[0.2em] text-shell/46"
+              >
+                Line Soon
+              </button>
+            </div>
           </div>
         </div>
       </section>
